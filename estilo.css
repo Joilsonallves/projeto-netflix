@@ -1,0 +1,72 @@
+body{
+    background-color:rgb(70, 70, 70);
+}
+/* Largura e Altura dos Cards */
+.filme .card {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.filme .card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse*/
+}
+
+.card-img-top {
+    object-fit: cover; /* Assegura que a imagem preenche o espaço sem distorcer */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .filme .card {
+        height: auto;
+    }
+}
+
+/* Navegação de páginas */
+#paginacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#paginacao a {
+    display: inline-block;
+    cursor:pointer;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #dc3545;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efeito de hover na paginação */
+#paginacao a:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+#paginacao a.active {
+    background-color: #155724; /* Cor diferente para o botão da página ativa */
+}
